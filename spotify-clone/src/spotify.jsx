@@ -1,5 +1,29 @@
 //https://developer.spotify.com/documentation/web-playback-sdk.quick-start/#
 
-export const authEndpoint="https://accounts.cpotify.com/authorize";
+export const authEndpoint="https://accounts.spotify.com/authorize";
+const redirectUri="http://localhost:5173/";
+const clientId = "2f1f8fc56e54471a970ee1887209b360";
 
-const redirectUri="http://localhost:5173/" 
+const scopes=[
+    "user-read-currently-playing",
+    "user-read-recently-played",
+    "user-read-playback-state",
+    "user-top-read",
+    "user-modify-playback-state",
+];
+
+export const getTokenFromURL= ()=>{
+    let token= window.location.hash
+        .substring(1)
+        .split('&');
+
+    token=token.reduce((initial,item) =>{
+            let parts=item.split('=');
+            initial[parts[0]] = decodeURIComponent(parts[1]);
+            return initial;
+        },{});
+
+    return token;
+}
+
+export const loginUrl= `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true`;
