@@ -5,7 +5,7 @@
     padding: 20px;
 }
 
-.left{
+.header .left{
     background-color: white;
     color: gray;
     border-radius: 30px;
@@ -22,14 +22,24 @@
     width: 100%;
 }
 
-.right{
+.left > input:focus{
+    outline: none;
+}
+
+.header .right{
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-width: 100px;
+    background: rgb(28, 28, 28);
+    border-radius: 30px;
+    height: fit-content;
+    border: 3px solid rgb(0, 0, 0);
 }
 
 .right > h4{
     margin-left: 10px;
     margin-right: 10px;
+    font-weight: 600;
+    color: rgb(225, 225, 225);
 }
