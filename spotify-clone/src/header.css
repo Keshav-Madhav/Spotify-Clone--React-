@@ -13,8 +13,10 @@
     flex: 0.5;
     display: flex;
     align-items: center;
-    min-width: 70px;
+    min-width: 75px;
     max-width: 300px;
+    height: max-content;
+    gap: 5px;
 }
 
 .left > input{
@@ -34,7 +36,7 @@
     background: rgb(28, 28, 28);
     border-radius: 30px;
     height: fit-content;
-    border: 3px solid rgb(0, 0, 0);
+    border: 3px solid rgb(10, 10, 10);
 }
 
 .right > h4{
