@@ -1,7 +1,7 @@
 //https://developer.spotify.com/documentation/web-playback-sdk.quick-start/#
 
 export const authEndpoint="https://accounts.spotify.com/authorize";
-const redirectUri="http://localhost:5173/";
+const redirectUri="https://spotify-clone-keshav.netlify.app/";
 const clientId = "2f1f8fc56e54471a970ee1887209b360";
 
 const scopes=[
